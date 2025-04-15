@@ -1,0 +1,57 @@
+<h2>学生列表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>姓名</th>
+      <th>年龄</th>
+      <th>年级</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.grade }}</td>
+      <td>
+        <button (click)="selectStudent(student)">编辑</button>
+        <button (click)="deleteStudent(student.id)">删除</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>添加学生</h2>
+<div>
+  <label>姓名：</label>
+  <input type="text" [(ngModel)]="newStudent.name" />
+</div>
+<div>
+  <label>年龄：</label>
+  <input type="number" [(ngModel)]="newStudent.age" />
+</div>
+<div>
+  <label>年级：</label>
+  <input type="text" [(ngModel)]="newStudent.grade" />
+</div>
+<button (click)="addStudent()">添加</button>
+
+<div *ngIf="selectedStudent">
+  <h2>编辑学生</h2>
+  <div>
+    <label>姓名：</label>
+    <input type="text" [(ngModel)]="selectedStudent.name" />
+  </div>
+  <div>
+    <label>年龄：</label>
+    <input type="number" [(ngModel)]="selectedStudent.age" />
+  </div>
+  <div>
+    <label>年级：</label>
+    <input type="text" [(ngModel)]="selectedStudent.grade" />
+  </div>
+  <button (click)="updateStudent()">更新</button>
+</div>
