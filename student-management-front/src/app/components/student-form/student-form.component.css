@@ -1,0 +1,15 @@
+/* src/app/components/student-form/student-form.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }

@@ -7,12 +7,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * stu Manage Controller
  */
 @Slf4j
 @RestController
 @RequestMapping("/students")
+@CrossOrigin(origins = "http://localhost:4200")
 public class StudentController {
 
     @Autowired
@@ -52,10 +55,10 @@ public class StudentController {
      * search stu
      * @param id
      */
-    @GetMapping("/{id}")
-    public Result getStudent(@PathVariable Integer id){
-        log.info("searching student for id:" + id);
-        Student student = studentService.getStudent(id);
+    @GetMapping
+    public Result getAllStudent(){
+        log.info("searching all students");
+        List<Student> student = studentService.getStudents();
         return Result.success(student);
     }
 

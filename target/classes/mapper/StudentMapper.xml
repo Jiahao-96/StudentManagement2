@@ -21,9 +21,8 @@
         WHERE id = #{id}
     </update>
 
-    <select id="getStudent" parameterType="java.lang.Integer" resultType="com.antra.studentmanagement2.pojo.Student">
+    <select id="getStudents" parameterType="java.lang.Integer" resultType="com.antra.studentmanagement2.pojo.Student">
         SELECT id, name, age, grade
         FROM student
-        WHERE id = #{id}
     </select>
 </mapper>

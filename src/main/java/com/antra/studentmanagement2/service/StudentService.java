@@ -30,10 +30,7 @@ public interface StudentService {
     void modifyStudent(Student student);
 
     /**
-     * search stu
-     * @param id
+     * search stus
      */
-    Student getStudent(Integer id);
-
-
+    List<Student> getStudents();
 }

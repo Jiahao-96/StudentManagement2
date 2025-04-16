@@ -44,11 +44,11 @@ public class StudentServiceImpl implements StudentService {
 
     /**
      * search stu
-     *
-     * @param id
      */
     @Override
-    public Student getStudent(Integer id) {
-        return studentMapper.getStudent(id);
+    public List<Student> getStudents() {
+        return studentMapper.getStudents();
     }
+
+
 }

@@ -1,0 +1,41 @@
+/* src/app/components/student-list/student-list.component.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .edit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .edit-modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-modal label {
+    margin-top: 10px;
+  }
+  
+  .edit-modal input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }

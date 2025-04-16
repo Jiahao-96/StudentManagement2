@@ -3,6 +3,8 @@ package com.antra.studentmanagement2.mapper;
 import com.antra.studentmanagement2.pojo.Student;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * stu management
  */
@@ -14,6 +16,5 @@ public interface StudentMapper {
     void deleteStudent(Integer id);
 
     void modStudent(Student student);
-
-    Student getStudent(Integer id);
+    List<Student> getStudents();
 }

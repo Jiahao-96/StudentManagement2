@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:studentManagement-front": "node dist/student-management-front/server/server.mjs"
+    "serve:ssr:student-management-front": "node dist/student-management-front/server/server.mjs"
   },
   "private": true,
   "dependencies": {
